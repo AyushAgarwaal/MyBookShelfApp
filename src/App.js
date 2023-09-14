@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import BookSearch from './components/bookSearch';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function App() {
+  const navigate = useNavigate();
+  const click = () => {
+    navigate('/books')
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className='bookshelf-heading'>BookShelf App</h1>
+      <BookSearch />
+      <button className='bookshelf-button' onClick={click}>My Bookshelf</button>
     </div>
-  );
+
+  )
 }
 
+
 export default App;
+

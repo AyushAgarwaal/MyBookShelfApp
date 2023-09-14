@@ -1,0 +1,6 @@
+.ul-cards {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
